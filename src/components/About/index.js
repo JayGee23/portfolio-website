@@ -1,6 +1,8 @@
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBootstrap, faCss3, faGitAlt, faHtml5, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons';
 
 const About = () => {
 
@@ -35,6 +37,29 @@ const About = () => {
                 <p>
                     fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
+            </div>
+
+            <div className='stage-cube-cont'>
+                <div className='cubespinner'>
+                    <div className='face1'>
+                        <FontAwesomeIcon icon={faBootstrap} color='#8311f9' />
+                    </div>
+                    <div className='face2'>
+                        <FontAwesomeIcon icon={faHtml5} color='#F06529' />
+                    </div>
+                    <div className='face3'>
+                        <FontAwesomeIcon icon={faJsSquare} color='#EFD81D' />
+                    </div>
+                    <div className='face4'>
+                        <FontAwesomeIcon icon={faGitAlt} color='#EC4D28' />
+                    </div>
+                    <div className='face5'>
+                        <FontAwesomeIcon icon={faCss3} color='#28A4D9' />
+                    </div>
+                    <div className='face6'>
+                        <FontAwesomeIcon icon={faReact} color='#5ED4F4' />
+                    </div>
+                </div>
             </div>
         </div>
     )
