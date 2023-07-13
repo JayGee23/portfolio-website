@@ -1,10 +1,12 @@
 import Loader from 'react-loaders';
 import './index.scss';
 import AnimatedLetters from '../AnimatedLetters';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
+    const form = useRef()
 
     useEffect(() => {
         const timeoutId = setTimeout(() => {
@@ -15,6 +17,27 @@ const Contact = () => {
           clearTimeout(timeoutId);
         };
     }, []);
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm(
+                'service_ukn6ufd',
+                'template_p8euigu',
+                form.current,
+                '1VPtwC2k-6Q-U2jzo'
+            )
+            .then(
+                () => {
+                    alert('Message sucessfully sent!')
+                    window.location.reload(false)
+                },
+                () => {
+                    alert('Failed to send message, please try again')
+                }
+            )
+    }
 
     return (
         <>
@@ -29,13 +52,13 @@ const Contact = () => {
                     </p>
 
                     <div className='contact-form'>
-                        <form>
+                        <form ref={form} onSubmit={sendEmail}>
                             <ul>
                                 <li className='half'>
-                                    <input type='text' name='name' placeholder='Name' required />
+                                    <input type='text' name='user_name' placeholder='Name' required />
                                 </li>
                                 <li className='half'>
-                                    <input type='email' name='email' placeholder='Email' required />
+                                    <input type='email' name='user_email' placeholder='Email' required />
                                 </li>
                                 <li>
                                     <input type='text' name='subject' placeholder='Subject' required />
