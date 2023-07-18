@@ -5,6 +5,12 @@
             "title": "Python War-Game",
             "description": "Python, Object-Oriented-Programming",
             "url": "http://google.com"
+        },
+        {
+            "cover": "/portfolio/first/cartoon.jpg",
+            "title": "React App",
+            "description": "JavaScript, React, Redux",
+            "url": "http://google.com"
         }
     ]
 }
