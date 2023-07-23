@@ -10,7 +10,6 @@ const Home = () => {
 
   const [letterClass, setLetterClass] = useState('text-animate');
   const nameArray = ['a', 'y', ',']
-  const jobArray = ['s', 'o', 'f', 't', 'w', 'a', 'r', 'e', ' ', 'd', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', '.']
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -35,7 +34,9 @@ const Home = () => {
             <img src={LogoTitle} alt="developer" />
             <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={15} />
             <br />
-            <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={22} />
+            <AnimatedLetters letterClass={letterClass} strArray={[...'Software ']} idx={22} />
+            <br className='break' />
+            <AnimatedLetters letterClass={letterClass} strArray={[...'Developer']} idx={22} />
           </h1>
           <h2>
             / Fullstack Developer / JavaScript Enthusiast / Educator
