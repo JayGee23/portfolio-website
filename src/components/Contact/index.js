@@ -45,7 +45,7 @@ const Contact = () => {
             <div className='container contact-page'>
                 <div className='text-zone'>
                     <h1>
-                        <AnimatedLetters letterClass={letterClass} strArray={['C', 'o','n','t','a','c','t', ' ', 'm', 'e']} idx={15} 
+                        <AnimatedLetters letterClass={letterClass} strArray={[...'Contact me']} idx={15} 
                         />
                     </h1>
                     <p>
@@ -55,10 +55,10 @@ const Contact = () => {
                     <div className='contact-form'>
                         <form ref={form} onSubmit={sendEmail}>
                             <ul>
-                                <li className='half'>
+                                <li className='half name-input'>
                                     <input type='text' name='user_name' placeholder='Name' required />
                                 </li>
-                                <li className='half'>
+                                <li className='half email-input'>
                                     <input type='email' name='user_email' placeholder='Email' required />
                                 </li>
                                 <li>
