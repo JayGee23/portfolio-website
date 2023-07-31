@@ -3,6 +3,9 @@ import Sidebar from '../Sidebar';
 import './index.scss';
 
 const Layout = () => {
+
+  console.log('Hi there! \u{1F44B} Thanks for checking out my website. Please reach out with any questions you have. I\'m always happy to chat \u{1F600}')
+
   return (
     <div className='App'>
       <Sidebar />
@@ -17,7 +20,7 @@ const Layout = () => {
           &lt;/body&gt;
           <br />
           <span className='bottom-tag-html'>
-          &lt;/html&gt;
+            &lt;/html&gt;
           </span>
         </span>
 
