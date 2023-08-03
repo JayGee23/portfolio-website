@@ -11,3 +11,19 @@
     border: #cddc39 solid;
     filter: drop-shadow(0px 0px 8px #ff5722)
 }
+
+@media screen and (max-width: 1200px) {
+    .container-image {
+        position: initial;
+        width: 100%;
+        height: 0%;
+        overflow: visible;
+    }
+
+    .profilePic {
+        width: 70%;
+        height: auto;
+        margin: 0 10%;
+
+    }
+}

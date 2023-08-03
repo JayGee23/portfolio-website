@@ -135,7 +135,9 @@ textarea {
         height: 400px;
         margin: 0;
     }
+}
 
+@media screen and (max-width: 1310px) {
     .info-map {
         display: none;
     }
